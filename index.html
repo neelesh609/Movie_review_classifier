@@ -1,0 +1,516 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Term Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div  id="wrapper" class="divided" style="z-index: 0;">
+			
+				<!-- One -->
+					<div style="z-index: 1;" class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+					
+						<div  class="content" style="float: left;">
+							
+							
+							<h1>Data Mining term Project </h1>
+							<h2> Movie Review Classifier </h2>
+							<h3>Introduction:</h3>
+							<p>The goal of this project is to build a classifier which will be able to predict if the given movie review is positive or negative <br/> 
+							For this experiment we have taken about 40,000 reviews for training data , 5000 reviews for development and 5000 reviews for testing the classifier.<br/>
+							<a href="https://www.kaggle.com/atulanandjha/imdb-50k-movie-reviews-test-your-bert"> please click here for the dataset </a><br/><br/>
+
+							There are many similar applications on the internet that perform the same action in a more efficient manner. </br>
+							<a href="https://freeappsforme.com/apps-for-movie-reviews/"> Please click here to find the top 10 best apps that provide moview revies</a><br/>
+							<a href="https://appgrooves.com/app/replika-your-ai-friend-by-luka-inc/negative"> Please click here to find similar apps that segregate the reviews into positive and negative ones.</a><br/><br/>
+
+                              There are a lot other apps apart from these that can segregate a positive and negative reviews . The application i have built 
+							  tries to segregate the review into positivie or negative instatntly with almost 86% accuracy.
+								</p><br/>
+
+								<h2> WHY ? </h2>
+
+								<p>A lot  of applications (better ones) already exist on the internet that can give a rating once you type your review . a lot of problems
+								are being caused because of the "fake reviews" or "neutral reviews" as humans we can figure out what exactly is going on but it is 
+								slightly challenging to make a machine understand rhw same.this is why i have made a modest attempt towards making the machine 
+								understand the reviews and tell us weather it is positive or negative , and when it comes to neutral reviews my machine tries it bests to
+							    predict wether it is on positive side or negative side<p/><br/>
+
+							<ul class="actions stacked">
+								<p>Please click below to refer the full code.</p>
+								<a href="https://www.kaggle.com/neeleshshashidhar/classifier"> <button type="button">Open Code</button></a><br/>
+								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+							</ul>
+						</div>
+						
+					</div>
+
+				<!-- Two -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Source codes and outputs:</h2>
+
+
+                             <h3>First we import all the Libraries required </h3>
+
+					
+								<img src="images/code1.PNG" alt="" /> <br/><br/><br/>
+
+								
+								<h3> We load the Data </h3>
+								<p>We segregate the data into training data , dvelopment data and testing data.</p>
+
+								<img src="images/code 2.PNG" alt="" />
+							
+						</div>
+</section>
+
+						<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+								<div class="content">
+								<h2> Now we print the data to verify the loading process.</h2>
+
+								<p>Here we verify if the data loaded is split properly into train , development and test data.</p>
+	
+								<img  src="images/code 5.PNG" alt="" /><br/><br/><br/>
+									</div>	
+							</section>
+
+						<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+							<div class="content">
+								<h2>Now we add a Column: Sentiment_id </h2>
+								
+								<p>We add this column and assign positive reviews to 1 and negative revies to 0.
+								We do this as lot of plotting and visualization would require numerical data.</p>
+
+						          <img  src="images/code 6.PNG" alt="" />
+								
+			           	</div>
+							
+						</section>
+
+
+
+
+				<!-- Three -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Now we print the data again.</h2>
+							<p>Here we print the data once again to make sure the sentiment_int column is added inall train , development and test data</p>
+							
+						
+								<img  src="images/code 7.PNG" alt="" /><br/><br/>
+
+								
+							
+						</div>
+						
+					</section>
+
+				<!-- Four -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Data Visualization</h2>
+							<p>Now we shall do some visualiztion to check the rows and columns of each type of data
+							and we shall also compare the nuber of positive and negative reviews in each type of data set.</p>
+							 
+							
+								<img src="images/code 8.PNG" alt="" /> <br/><br/>
+
+								<p> We shall check the number of records in train , test and development data</p>
+
+								
+								<img src="images/code 9.PNG" alt="" /> <br/><br/>
+								
+								
+						</div>
+
+					</section>
+
+				<!-- Five -->
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Data Cleaning</h2>
+
+						<p>In-order to obtain the best accuracy we need to clean the data , in this process we remove the duplicates and null values from the data.
+                            I did not have to remove the special characters as the data did not have any and the data was also in lower case</p>
+						
+					
+						     
+							<img  src="images/removing duplicates.PNG" alt="" /> <br/><br/><br/>
+							<h3> Removing the Null values and converting the data to lower case a</h3>
+							<p> This step is essential because the classifier may consider upper case : AMZAING and lower case : amazing as two different words.</p>
+							<img  src="images/removing null.PNG" alt="" />
+
+							
+						</ul>
+					</div>
+
+				</section>
+					
+							
+
+				<!-- Six -->
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Now we check the rating count</h2>
+						
+						
+
+					
+						<ul class="actions stacked">
+							<h3>We check the number of positive and negative reviews in train data</h3>
+							<img  src="images/rating count.PNG" alt="" /> 
+						
+					</div>
+
+				</section>
+
+
+
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2> Creating X and Y for train , test and dev</h2>
+						<p>To build classifiers (to train and predict):
+							We will need X and y for each dataset<br/>
+
+							The term frequency is calculated as:<br/>	
+							Term frequency = (Number of Occurrences of a word)/(Total words in the records)<br/>
+
+						And the Inverse Document Frequency is calculated as:<br/>
+						IDF(word) = Log((Total number of records)/(Number of records containing the word))</p>
+						
+						
+							<img  src="images/tfidf.PNG" alt="" /> <br/><br/><br/>
+
+							<p>Above we have made dictionary to store the results of the classifiers </p>
+							
+							
+					</div>
+
+				</section>
+
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Building the Classifiers </h2>
+						
+						<p>We will build and compare multiple classifiers which may be useful for text classification:<br/><br/>
+
+								1 ) Naive Bayes Classifier<br/>
+								2) SVM (Support Vector Machine) Classifier<br/>
+								3) Random Forest Classifier</p>
+
+								<p>there are various other text classifiers but for this experiment we shall use the above three classifiers.</p><br/><br/>
+
+                            <h2>Naive Bayes Classifier. </h2>
+
+							<h4>Naive bayes method is one of the best method for text classification and text analysis in machine learning  
+								Naive bayes is not a single algorithm its a family of algorithms<br/>
+
+								many of those algorithms are:<br/><br/>
+
+								Binomial naive bayes. - it is useful for features that are binare ie. 0 and 1 <br/><br/>
+								Multinomial naive bayes. it is the most ideal algorithm for text classification <br/><br/>
+								Gaussian naive bayes. it is ideal for features that follow a normal distribution , or features that are continuous.<br/><br/>
+						
+						        For our experiment we use Multinomial Naive Bayes using smoothing: <br/>
+                                
+								We calculate both accuracy and mean squared error and later decide which parameter to use to decide the best classifier.
+							</h4>
+				
+							<img src="images/naive bayes.PNG" alt="" /> 
+
+					</div>
+
+
+				</section>
+
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2> Support Vector Machine (SVM)</h2>
+						
+						
+						<p> Amongst the many text classifiers SVM is also one of the most efficcient and faster classifier
+							According to the documentation of scikit-learn : <br/>
+								For large datasets consider using sklearn.svm.LinearSVC and not sklearn.svm.SVC
+								So, we will go with sklearn.svm.LinearSVC<br/>
+
+								Support vector machine decides the best boundary between vectors that belong to a group<br/>
+								It can be applied to any kind of vector which encode any kind of data. SVM decides where to draw the 
+								best line or the hyperplane that divides the data efficiently the space between the category and the hyperplane on both sides 
+								decides the accuracy. <br/>
+
+								We will try SVM for C=1 , c=100 and c= 1000
+
+						
+						</p>
+
+					        <h2>C = 1</h2>
+						
+							<img src="images/svm_c=1.PNG" alt="" /> 
+							
+							
+							<h2>C = 100</h2>
+							
+
+							<img src="images/svm_c=100.PNG" alt="" /> 
+
+							<h2>C = 1000</h2>
+							
+
+							<img src="images/svm_c=1000.PNG" alt="" /> 
+
+
+						
+					</div>
+
+
+				</section>
+                
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Random Forest Classifier </h2>
+				
+
+								<p>A Random Forest Classifier is a meta estimator that fits a number of decision tree classifiers 
+									on various sub samples of dataset and uses averaging to improve the accuracy and control overfitting.<br/>
+
+									In other words random  decision forests are ensemble learning method for classification by building decision trees 
+									during training time and outputs the mean prediction of indivisual trees.
+
+									The number of trees in the forest (n_estimators) is considerd as one of the most important factor for getting better accuracy.
+                                    We will use n_estimators = 10 and 50 to check the results.
+
+								</p>
+
+                           
+
+						
+				
+							<img src="images/random_forest.PNG" alt="" /> <br/><br/>
+
+							<img src="images/random_50.PNG" alt="" /> 
+
+							<h3>We can see that Random_forest classifier wit  n_estimators = 10 has a better accuracy.</h3>
+
+							
+
+					</div>
+					
+
+
+				</section>
+
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Comparing the accuracies </h2>
+				
+
+								<p>Here we compare the accuracies to find the best classifier , we can consider the mean sqaured error as well but I have 
+									chosen accuracies to compute the same as our movie reviewer needs high accuracy to predict if the data is positive or negative.
+
+
+								</p>
+
+                           
+
+						
+				
+							<img src="images/best_classifier.PNG" alt="" /> <br/><br/>
+
+							<img src="images/accuracy comparison.PNG" alt="" /> 
+
+							
+
+							<h3>We can see that Multinomial Naive Bayes  has the best accuracy.</h3>
+
+							
+
+					</div>
+					
+
+
+				</section>
+
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Input field and test accuracy </h2>
+				
+
+								<p>Now we use the best classifier on the test data and find out the accuracy , once we have the accuracy 
+									we build an input field that gives the output of wether the review is positive or negative.
+
+								</p>
+
+                           
+
+						
+				
+								<img src="images/bestclassifier_accuracy.PNG" alt="" /> 
+
+							<img src="images/input field.PNG" alt="" /> 
+
+							<h4>Outputs Samples</h4>
+
+							<img src="images/input_positive.PNG" alt="" /> 
+
+							<img src="images/input_negative.PNG" alt="" /> 
+
+							
+						</div>
+					
+
+
+				</section>
+
+
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Graphic User Interface (GUI) </h2>
+				
+
+								<p>I have built a basic GUI that will take your review as input and tell us weather the review is 
+									positive or negative.
+								</p>
+
+                           
+
+						
+				
+								<img src="images/Capture.PNG" alt="" /> <br/><br/>
+
+							<img src="images/negative gui.PNG" alt="" /> <br/><br/>
+
+							<img src="images/positive gui.PNG" alt="" /> <br/><br/>
+
+							<img src="images/gui code.PNG" alt="" /> 
+
+							
+						</div>
+					
+
+
+				</section>
+
+				
+                                  
+
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+
+                        <h2>Contributions</h2>
+
+						
+
+						<p>My Major contribution to this would be choosing the appropriate classifiers required for text classification.
+							and increasing the accuracy so that the machine would appropriately predict weather the review is positive or not.
+							I do have used some references inorder to build the classiiers but also tried to use some hyperparameters among them to increse its accuracies.
+							overall I have been able to push the accuracy from 66% to 85% and the machine is almost pinpoint in deciding weather the review is positive or negative
+
+						</p>
+
+						<h2>Challenges</h2>
+
+
+
+					
+						<p>My major challenge was to choose and build the appropriate classifiers. data cleaning was not a mjor issue but to choose the 
+							right classifier I had to learn how they function and thus choose the right ones for this experiment.
+							according to my knowledge i have chosen the best ones but there might be better classifiers as well.
+							And to complete the project within a limited timeframe due to other exams was also one of the challenges I faced !
+
+
+						</p>
+
+						<h2>Acknowledgement</h2>
+
+						<p>I would like to thank Dr.Deok Gun Park for this wonderful session of data mining classes and this amaazing opportunity to
+							apply the learning in the form of this project. It has added great value to my resume , in the end it was a pleasure taking up these classes
+							Thank you once again Dr.Park !
+						</p>
+
+						<h2>References</h2>
+
+						<p>I have referrred the code from the following references. 
+							These references have given a good headstart to the project and helped me understand the concept better.
+						I have also tried to experimnent a few things from the referenced code which is mentioned under "contributions"</p>
+					
+						<a href=" https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html"> https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html</a><br/>
+						<a href="https://stackabuse.com/text-classification-with-python-and-scikit-learn/  ">https://stackabuse.com/text-classification-with-python-and-scikit-learn/  </a><br/>
+						<a href="https://www.reddit.com/r/MachineLearning/comments/2uhhbh/difference_between_binomial_multinomial_and/co8xxls/">https://www.reddit.com/r/MachineLearning/comments/2uhhbh/difference_between_binomial_multinomial_and/co8xxls/</a><br/>
+						<a href="https://scikit-learn.org/stable/modules/naive_bayes.html">https://scikit-learn.org/stable/modules/naive_bayes.html</a><br/>
+                        <a href="https://monkeylearn.com/text-classification-support-vector-machines-svm/">https://monkeylearn.com/text-classification-support-vector-machines-svm/</a><br/>
+                        <a href="https://scikit-learn.org/stable/modules/svm.html">https://scikit-learn.org/stable/modules/svm.html</a><br/>
+                        <a href="https://www.datacamp.com/community/tutorials/svm-classification-scikit-learn-python">https://www.datacamp.com/community/tutorials/svm-classification-scikit-learn-python</a><br/>
+						<a href="https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html">https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html</a><br/>
+						<a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier">https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier</a><br/>
+						<a href="https://en.wikipedia.org/wiki/Random_forest">https://en.wikipedia.org/wiki/Random_forest</a><br/>
+						<a href="https://medium.com/datadriveninvestor/deploy-your-machine-learning-model-using-flask-made-easy-now-635d2f12c50c">https://medium.com/datadriveninvestor/deploy-your-machine-learning-model-using-flask-made-easy-now-635d2f12c50c</a><br/>
+						<a href="https://www.tutorialspoint.com/after-method-in-python-tkinter#:~:text=Tkinter%20is%20a%20python%20library%20to%20make%20GUIs.,function%20FuncName%20after%20the%20given%20delay%20in%20milisecond">https://www.tutorialspoint.com/after-method-in-python-tkinter#:~:text=Tkinter%20is%20a%20python%20library%20to%20make%20GUIs.,function%20FuncName%20after%20the%20given%20delay%20in%20milisecond</a><br/><br/><br/>
+
+						
+					
+						<h2>Links</h2>
+
+						<a href="https://www.kaggle.com/neeleshshashidhar/classifier/edit/run/61777784">Kaggle Notebook .</a><br/>
+						<a href =""></a><br/>
+						<a href="https://neelesh609.github.io/Portfolio/"> My portolio</a><br/>
+
+						
+
+					
+						
+					</div>
+
+				</section>
+				<!-- Contact -->
+				<section id="contact" class="four" style="text-align: center;">
+					<div class="container">
+						
+						<header>
+							<h2>Contact</h2><br/>
+							
+
+						<h3></h3>
+						</header>
+						<dl class="alt">
+							<div class="container">
+
+								<p> Any Queries ? Contact me ! </p>
+								<p><strong>Email Id : </strong>Neelesh216@gmail.com</p>
+								<p><strong>Address :</strong> 404 E Border st, Arlington, Texas 76010, USA</p>
+								<p><strong>Phone :</strong> 682 375 1222</p>
+							  </div>
+
+					</div>
+				</section>
+					
+
+				<!-- Seven -->
+					
+
+				<!-- Footer -->
+					
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
