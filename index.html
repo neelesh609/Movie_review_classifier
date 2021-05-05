@@ -425,12 +425,31 @@
 						a low accuracy but when the n_estimators increased to 20 (more treess) the classifiers accuracy decreased. same way SVM has c= 1,10,100
 						in which c=100 has the best accuracy. this is the basic explanation of hyperparameter tuning.</p>
 					
-						
-						<h2>Explaining the Basic Algorithms</h2>
+						<h2>Explanatiion of basic algorithm</h2>
 
-						<p></p>
-
+						<p> The classifier used are : Multinomial naive bayes , Support Vector Machine (SVM) , Random-Forest Classifier </p><br/>
 						
+						<h4>Multinomial Naive Bayes</h4>
+						<p>Algorithm : Contains two basic steps train the Multinomial NB and Apply the Multinomial NB
+						Training of Multinomial NB contains the following steps : Convert the dataset into frquency table <br/> 
+						It creates a likelihood by finding probablities</br> Now we use the Naive Bayesian equation to find the posterior probablities of each class</br>
+						The class with highest Posterior probablity will be the outcome.</p>
+
+						<h4>Support Vector Machine</h4>
+						<p>Lets suppose there is a dataset that contains two categories which are red and blue plotted on a 2d plane , we can easily 
+						segregate the data by drawing a line. But when the data is spread over a n-dimensional space SVM separates the data by drawing a hyperplane in between
+						them . This hyperplane is also called as Decision boundary.</p>
+						
+						<h4>Random-Forest Classifier<h4>
+						<p>Random forest like its name suggests, contains a large number of  decision trees that operate as an ensemble. 
+						Each individual tree in the random forest spits out a class prediction and the class with the most votes becomes our model’s prediction <br/>
+						
+						Working: <br/>
+						Select a set of random Samples from datasets<br/>
+						We need to create a decision tree for each selected sample<br/>
+						The we get the predicted values from each tree created.<br/>
+						Then for each predicted result voting is done. </br>
+						It will select the result with highest votes. </br> </p>
 						
 						<h2>Contributions</h2>
 
